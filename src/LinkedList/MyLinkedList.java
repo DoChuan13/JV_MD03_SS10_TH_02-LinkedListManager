@@ -6,6 +6,22 @@ public class MyLinkedList {
     private Node head;
     private int numNodes;
 
+    //Step 1-1: Thiết lập Inner Class =>
+    /*gồm 2 thuộc tính: "data" chứa dữ liệu của nó và "next" chứa liên kết với phần tử kế tiếp
+     (nếu có, hoặc là null nếu không có)*/
+    private class Node {
+        private Node next;
+        private Object data;
+
+        public Node(Object data) {
+            this.data = data;
+        }
+
+        public Object getData() {
+            return data;
+        }
+    }
+
     //Step 1-2: Thiết lập Constructor
     public MyLinkedList(Object data) {
         head = new Node(data);
@@ -74,19 +90,4 @@ public class MyLinkedList {
         }
     }
 
-    //Step 1-1: Thiết lập Inner Class =>
-    /*gồm 2 thuộc tính: "data" chứa dữ liệu của nó và "next" chứa liên kết với phần tử kế tiếp
-     (nếu có, hoặc là null nếu không có)*/
-    private class Node {
-        private Node next;
-        private Object data;
-
-        public Node(Object data) {
-            this.data = data;
-        }
-
-        public Object getData() {
-            return data;
-        }
-    }
 }
