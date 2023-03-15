@@ -85,6 +85,8 @@ public class MyLinkedList {
     public void printList() {
         Node temp = head;
         while (temp != null) {
+            //Điều kiện while là temp!=null, tức là tempI-1.next = null => liên kết cuối cùng không còn nữa
+            /*Sau mỗi lần lặp biến temp tiếp tục dẫn sâu vào .next => truy xuất tới các phần tử kế tiếp*/
             System.out.println(temp.data);
             temp = temp.next;
         }
